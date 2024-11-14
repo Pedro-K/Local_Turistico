@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --background-default: #f5f4f0;
+  --border-primary: #f5f4f0;
+
+  --text-primary: #1b1b1b;
+  --text-secondary: #333333;
+  --text-tertiary: #696969;
+  --text-headline: #e1624f;
+
+  --accent-blue: #0c51a7;
+  --accent-orange: #e95e10;
+  --accent-pink: #e5245e;
+  --accent-purple: #591b98;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  background: var(--background-default);
+}
+
+.container {
+  width: 100%;
+  padding: 0 8rem;
+  margin: 8.8rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+h1,
+h2,
+h3,
+.headline {
+  font-weight: bold;
+}
+
+.headline,
+p,
+.subtitle {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+p {
+  font-weight: 400;
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2.8rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-headline);
+}
+
+.first-image {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  p {
+    text-align: center;
+    color: var(--text-secondary);
+  }
+}
+
+hr {
+  border: 1px solid var(--border-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  .title-list {
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin-top: 0.8rem;
+    }
+    p {
+      color: var(--text-secondary);
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .content-card {
+        h2 {
+          color: var(--text-primary);
+          margin-bottom: .4rem;
+        }
+        div{
+          p{
+            color: var(--text-secondary);
+          }
+          ul{
+            margin-left: 2rem;
+            li{
+              span{
+                color: var(--accent-blue);
+                font-weight: bold;
+                &.purple{
+                  color: var(--accent-purple);
+                }
+                &.pink{
+                  color: var(--accent-pink);
+                }
+                &.orange{
+                  color: var(--accent-orange);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer{
+  p{
+    color: var(--text-secondary);
+    text-align: center;
+  }
+}
